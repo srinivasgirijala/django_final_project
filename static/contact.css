@@ -1,0 +1,300 @@
+h1{
+text-align: center;
+background-color: rgb(56, 56, 56);
+color: white;
+padding: 1vh;
+margin-top: 2vh;
+border-radius: 2vh;
+}
+h2{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    width: 60%;
+    border-top: tomato solid;
+}
+h3{
+    text-transform: capitalize;
+    text-align: center;
+}
+#dym{
+    background-color: rgb(46, 45, 46);
+    width: 50%;
+    border-radius: 2vh;
+}
+.mo{
+    text-transform: capitalize;
+    text-align: center;
+}
+.ty{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    margin-bottom: 2vh;
+    color: white;
+    border-radius: 3vh;
+}
+#vf{
+    margin-left: 12vh;
+    margin-top: 7vh;
+}
+.op{
+    font-family: sans-serif;
+    font-weight: bolder;
+    margin-left: 0vh;
+}
+.cd{
+    margin-left: 6vh;
+}
+.yt{
+    margin-left: 3vh;
+}
+.m{
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+.t,.b,.h,.r{
+    margin-left: 3vh;
+
+}
+.r{
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+.a{
+    font-family: sans-serif;
+    font-weight: bolder;
+    margin-left: 1vh;
+}
+.oo{
+    font-family: sans-serif;
+    font-weight: bolder;
+    margin-left: 3vh;
+}
+.rrr{
+    font-family: sans-serif;
+    font-weight: bolder;
+    
+}
+.rr,.ui{
+   margin: 0px;
+}
+.njk{
+    background-color: rgb(37, 37, 37);
+    color:white ;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 20px;
+    padding: 3px;
+    margin-top: 37vh;
+}
+.he{
+    color: white;
+    font-family: sans-serif;
+    font-size:30px;
+    text-transform: capitalize;
+    margin-top: 15vh;
+}
+.j{
+    color: rgb(202, 202, 202);
+    font-size: 20px;
+    text-transform: capitalize;
+    font-family: sans-serif;
+}
+
+::placeholder{
+    color: rgb(218, 0, 0);
+    opacity: 1;
+}
+.s{
+width: 83%;
+height: 5vh;
+margin-top: 2vh;
+padding: 3vh;
+opacity:0.7;
+border:none;
+outline: none;
+background-color: rgb(241, 231, 231);
+border-radius: 1vh;
+color: black;
+
+}
+.s:hover{
+    border-bottom: 4px solid rgb(255, 0, 0);
+}
+.gty:hover{
+    border-bottom: 4px solid rgb(255, 0, 0);
+}
+.gty{
+    width: 83%;
+    height: 5vh;
+    margin-top: 2vh;
+    padding: 3vh;
+    opacity:0.7;
+    outline: none;
+    border: none;
+    background-color: rgb(241, 231, 231);
+    border-radius: 1vh;
+    color: black;
+    
+}
+.sd{
+    outline: none;
+    border: none;
+    background-color: rgb(241, 231, 231);
+    border-radius: 1vh;
+    margin-top: 2vh;
+    padding: 1vh;
+    color: black;
+  
+}
+.ad{
+    width: 40%;
+    margin-top: 2vh;
+   border-radius: 2vh;
+   border:none;
+   font-family: sans-serif;
+   font-size: 18px;
+   font-weight: bold;
+   padding:1.5vh;
+   color: white;
+   margin-right: 20vh;
+   margin-bottom: 2vh;
+background-color: rgb(32, 32, 32);
+}
+h3{
+ text-transform: uppercase;
+ font-weight: bold;
+}
+.pi{
+ background-color: rgb(255, 3, 3);
+ color: white;
+ width: 30%;
+ padding: 1vh;
+ text-transform: capitalize;
+ border-radius: 2vh;
+ text-align: center;
+}
+.mlo{
+    text-transform: capitalize;
+}
+.fa-facebook:hover{
+   transform:translate(0,-15px);
+}
+.fa-instagram:hover{
+    transform:translate(0,-15px);
+ }
+ .fa-whatsapp:hover{
+    transform:translate(0,-15px);
+ }
+ .fa-telegram:hover{
+    transform:translate(0,-15px);
+ }
+ .fa-github:hover{
+    transform:translate(0,-15px);
+ }
+.fa-facebook{
+    
+    
+   margin: 2vh;
+    background-color: rgb(0, 68, 255);
+    padding: 2vh;
+    border-radius: 1vh;
+    color:white;
+}
+.fa-instagram{
+   color: rgb(255, 0, 242);
+   background-color: rgb(255, 255, 255);
+   
+   margin: 2vh;
+   font-size:35px;
+   padding: 2vh;
+   border-radius: 1vh;
+}
+.fa-whatsapp{
+    
+    margin: 2vh;
+    font-size:35px;
+    background-color: rgb(37, 255, 8);
+    color: white;
+    padding: 2vh;
+    border-radius: 1vh;
+}
+.fa-telegram{
+    margin: 2vh;
+   
+    font-size:35px;
+    background-color: rgb(8, 123, 255);
+    color: white;
+    padding: 2vh;
+    border-radius: 1vh;
+
+}
+.fa-github{
+    margin: 2vh;
+    font-size:35px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 2vh;
+    border-radius: 1vh;
+}
+
+
+@media screen and (max-width:700px) {
+    .he{
+        color: white;
+        font-family: sans-serif;
+        font-size:17px;
+    }
+    .j{
+        color: rgb(202, 202, 202);
+        font-size: 15px;
+    }
+    .s{
+        width: 70%;
+    }
+    .gty{
+        width: 70%;
+    }
+    .ad{
+        width: 42%;
+        margin-left: 15vh;
+        font-size: 12px;
+        
+    }
+    .fa-facebook{
+        font-size:5px;
+        margin-left:1vh ;
+        margin-right:1vh;
+    }
+    .fa-instagram{
+     
+       font-size:5px;
+       margin-left:1vh ;
+       margin-right:1vh;
+    }
+    .fa-whatsapp{
+        font-size:5px;
+        margin-left:1vh ;
+        margin-right:1vh;
+    }
+    .fa-telegram{
+     
+        font-size:5px;
+        margin-left:1vh ;
+        margin-right:1vh;
+    }
+    .fa-github{
+       
+        font-size:5px;
+        margin-left:1vh ;
+        margin-right:1vh;
+    }
+ #dym{
+     width: 90%;
+ }
+ h2{
+     font-size:15px;
+ }
+ .sd{
+   width: 90%;
+ }
+}

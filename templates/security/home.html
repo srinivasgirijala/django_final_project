@@ -1,0 +1,224 @@
+{% load socialaccount %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+<title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <style>
+        body{
+            background-color: whitesmoke;
+        }
+        .dj{
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+            color: white;
+            font-size: 40px;
+            font-family: sans-serif;
+            font-weight: bold;
+            border-radius: 3vh;
+            margin-top: 2vh;
+        }
+        #ui{
+            background: rgb(9,62,121);
+background: linear-gradient(90deg, rgba(9,62,121,1) 0%, rgba(14,0,252,1) 0%, rgba(0,255,244,1) 100%);
+            margin-top: 4vh;
+            height: 60vh;
+    
+        }
+        .d{
+            background-color: rgb(224, 0, 0);
+            color: white;
+            font-family: sans-serif;
+            font-size: 25px;
+            padding: 2vh;
+            padding-left: 3.2vh;
+            padding-right: 3.2vh;
+            border-radius: 2vh;
+         
+        }
+        .fa-google{
+            margin-left: 1.5vh;
+        }
+        .fa-facebook{
+            margin-left: 1.5vh;
+        }
+        .fa-github{
+            margin-left: 1.5vh;
+        }
+        .df{
+            background-color: rgb(0, 255, 170);
+            font-size: 26px;
+            color: rgb(255, 255, 255);
+            padding: 1.7vh;
+            padding-left: 2vh;
+            padding-right:2vh;
+            font-family: sans-serif;
+            border-radius: 2vh;
+           
+        }
+        .jd{
+            background-color: rgb(44, 0, 73);
+            font-size: 28px;
+            color: rgb(255, 255, 255);
+            padding-left: 6vh;
+            padding-right: 6vh;
+            padding-top: 1.8vh;
+            padding-bottom: 1.8vh;
+            font-family: sans-serif;
+            border-radius: 2vh;
+        }
+        .di{
+            background-color: rgb(38, 60, 255);
+            font-size: 25px;
+            color: rgb(255, 255, 255);
+            padding: 2vh;
+            font-family: sans-serif;
+            border-radius: 2vh;
+        }
+        .dl{
+            background-color: rgb(0, 0, 0);
+            font-size: 25px;
+            color: rgb(255, 255, 255);
+            padding: 2vh;
+            font-family: sans-serif;
+            border-radius: 2vh;
+            padding-left: 3.2vh;
+            padding-right: 3.2vh;
+        }
+        #o{
+            background-color: rgb(255, 255, 255);
+            height: 60vh;
+        }
+        .fa-user-alt{
+            color: white;
+            font-size: 60px;
+            margin-top:3vh;
+        }
+   .fa-fighter-jet{
+       color: white;
+       font-size: 40px;
+       margin-top: 4vh;
+   }
+   .fa-key{
+       margin-left: 2vh;
+   }
+
+
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h6 {
+    color: #fff;
+    font-family: sans-serif;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .10em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .10em; /* Adjust as needed */
+    animation: 
+      typing 4.0s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+
+   #da{
+       color: white;
+   }
+   H5{
+       color: white;
+   }
+ 
+     
+ #io{
+     color: white;
+     font-size: x-large;
+     font-weight: bold;
+
+ }
+ .df,.dl,.d,.di:hover{
+      color: white;
+ }
+ marquee{
+    color: white;
+    margin-top: 4vh;}
+ @media screen and (max-width:850px) {
+            .dj{
+                font-size: 15px;
+            }
+            .fa-fighter-jet{
+            font-size: 30px;    
+            }
+
+            .df,.dl,.d,.di{
+                font-size: 20px;
+            }
+            .jd{
+                font-size: 20px;
+            }
+
+#ui{
+    height: 90vh;
+}
+}
+    </style>
+    <center><div class="container">
+        <p class="dj">THE USER REGISTRATION FORM....</p>
+    </div></center> 
+    <center>
+        
+       <div class="container">
+        <div id="ui">
+           <div class="row">
+               <div class="col-md">
+               
+                <i class="fas fa-fighter-jet"></i><br>
+                <div class="typewriter">
+                    <h6>Welcome To Nasa  Space Academy....</h6>
+                  </div>
+              <hr>
+              <i class='fas fa-user-alt'></i>
+              <br>
+              <p id="da">Welcome User,</p>
+             
+              <h5>PLEASE REGISETER/LOGIN BEFORE EXPLORING.... </h5>
+              <p id="io">>>>>>></p>
+              
+             <marquee>This notice provides NASA's policy regarding the nature, purpose, use and sharing of any information collected via this Web site. The information you provide on a NASA Web site will be used only for its intended purpose. We will protect your information consistent with the principles of the Privacy Act, the e-Government act of 2002, the Federal Records Act, and as applicable, the Freedom of Information Act.</marquee>
+               </div>
+               <div class="col-md">
+               <div id="o">
+                    <br>  <br>  <a class="jd" href="{% url 'login' %}">Login Form<i class="fas fa-key"></i></a><br><br>
+                    
+                    <a class="df" href="{% url 'register' %}">Registration Form<i class="fas fa-key"></i></a><br><br>
+                    <a class="dl" href="{%  provider_login_url 'github' %}">Login with Github<i class="fa fa-github"></i></a><br><br>
+                 <a class="d"href="{%  provider_login_url 'google' %}">Login with Google<i class="fa fa-google"></i></a><br><br>
+                 <a class="di"href="{%   provider_login_url 'facebook' %}">Login with Facebook<i class="fa fa-facebook"></i></a><br><br>
+                
+                </div>
+                </div>
+           </div>
+       </div>
+    </div>
+    </center>
+  
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,123 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link type="text/css"rel="stylesheet"href="{% static 'contact.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+      <h1 class="container-fluid">NASA SPACE ACADEMY</h1>
+ <style>
+    #fj{
+        background-image: url("{% static 'images/1608.jpg'%}");
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        background-repeat: no-repeat;                     
+        background-size: cover;          
+        height: 100vh;
+        overflow-y: hidden;
+        background-position:center;
+        image-rendering: crisp-edges;      
+      }
+ </style>
+         
+   <marquee>
+    <img src="{% static 'images/amer.jpg'%}"class="img-fluid"width=35px> <h5> NASA ACADEMY</h5>
+  </marquee>
+
+<div class="container">
+    <div class="row">
+        <div class="ty">
+          <center>
+          <h4>........WORKING TIMES........</h4>
+                <H6>MONDAY TO FRIDAY</H6>
+                <P>9AM - 6PM</P>
+                <H6>SATURDAY & SUNDAY</H6>
+                <P>Holidays</P>
+              </center> 
+              </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% for message in messages %}
+<div class="container">
+    <div class="alert alert-success alert-dismissible">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>Success!</strong> <b>{{message}},</b>Thank u, we will get in touch with in 24hrs....
+    </div>
+</div>
+{% endfor %}
+  <div id="dw">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm">
+                  <h3>contact with us....</h3>
+                  <p class="mo">tell us whats your opinion on my site,if u have any queries feel free to contact with us 24/7....</p>
+                  <p class="pi">address</p>
+                  <p class="mlo">near five shops center,kandakam street,<br>eluru,534001.</p>
+                  <p class="pi">email</p>
+                  <p class="mlo">srinivasgirijala777@gmail.com<br>srinivasgirijala899@gmail.com</p>
+                  <p class="pi">phonenumber</p>
+                  <p class="mlo">+91-8688042112</p>
+                </div>
+            
+              <div class="col-sm">
+                <form action=" "method="POST">
+                    {% csrf_token %} 
+                <input type="text" class="s"placeholder="Enter Your Name"name="name"required>
+                <input type="email" class="gty"placeholder="Enter Your E-Mail"name="email"required>
+                <textarea class="sd" cols="72"rows="5"placeholder="Enter Your Message"name="subject"required></textarea>
+                <center><input type="submit"class="ad"></center>
+                </form>
+           
+             </div>
+            </div>
+      </div>
+  </div>
+ <br>
+  <center>
+<div id="dym">
+  <div class="container">
+      <div class="row">
+        <div class="col-sm">
+            <h2><center>Contact With Social Media</center></h2> 
+            <a href="https://www.facebook.com/srinivas.girijala.3"target="blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/royal_lifeeeeeeeee/"target="blank"><i class="fa fa-instagram"></i></a>
+             <a href="https://t.me/royal_lifeeeeeeeee"target="blank"><i class="fa fa-telegram"></i></a>
+             <a href="https://api.whatsapp.com/send?phone=8688042112&text=hello!%20admin"target="blank"><i class="fa fa-whatsapp"></i>
+             <a href="https://github.com/srinivasgirijala?tab=repositories"target="blank"><i class="fa fa-github"></i></a>
+           </div>
+      </div>
+  </div>
+</div>
+</center>
+<div class="njk">
+    copyright &copy; 2021 practise session
+ </div>
+
+</body>
+</html>

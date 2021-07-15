@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>Document</title>
+</head>
+<body>
+ 
+    
+{% block content %} 
+<style>
+  #d{
+    color: white;
+    background: rgb(9,62,121);
+background: linear-gradient(90deg, rgba(9,62,121,1) 0%, rgba(14,0,252,1) 0%, rgba(231,0,255,1) 100%);
+    text-align: center;
+    font-size: 35px;
+    margin-top: 2vh;
+    border-radius: 2vh;
+    font-weight: bold;
+  }
+  #da{
+  background-color: white;
+  margin-top: 15vh;
+  }
+.se{
+  background: rgb(9,28,121);
+  background: linear-gradient(90deg, rgba(9,28,121,1) 0%, rgba(14,0,252,1) 100%, rgba(0,255,192,1) 100%);
+  outline: none;
+  border:none;
+  font-size: 20px;
+  color: white;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  border-radius: 3vh;
+
+}
+.sa{
+  color: red;
+}
+@media screen and (max-width:850px){
+  #d{
+    font-size: 27px;
+  }
+}
+</style>
+<div class="container">
+  <p id="d">LOGIN PAGE</p>
+</div>
+
+<center>
+  
+  <div class="container">
+  <div id="da">
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+          <div class="checkbox">
+            <label><input type="checkbox" name="remember" required> Remember me</label>
+          </div>
+          <div class="g-recaptcha" data-sitekey="6Ldwd38bAAAAAJ5FZs3vkl_ynjXt58kvyMA-T96B" required></div>
+        <button type="submit" class="se">Login</button>
+        <br><br>
+        <a  class="sa" href="{% url 'password_reset'%}">Forgotten your password?</a>
+    </form>
+    <a class="j" href="{% url 'home' %}">Back To Home</a>
+
+     </div>
+    </div>
+  </center> 
+  {% endblock content %}
+</body>
+</html>

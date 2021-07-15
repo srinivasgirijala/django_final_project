@@ -1,0 +1,403 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css"rel="stylesheet"href="{% static 'dashboard.css'%}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body onpageshow="pageshow()"ononline="onfunction()"onoffline="offfunction()">
+ 
+      <style class="img-fluid">
+        #ok{
+            background-image: url("{% static 'images/hy.jpg'%}");
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            background-repeat: no-repeat;                     
+            background-size: cover;          
+            height: 60vh;
+            overflow-y: hidden;
+            background-position:center;
+            image-rendering: crisp-edges;      
+          }
+          #fj{
+            background-image: url("{% static 'images/1608.jpg'%}");
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            background-repeat: no-repeat;                     
+            background-size: cover;          
+            height: 100vh;
+            overflow-y: hidden;
+            background-position:center;
+            image-rendering: crisp-edges;      
+          }
+          .js{
+            color: white;
+            margin-left: 4vh;
+            font-size: 20px;
+          }
+      
+       </style>
+       <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-dark ">
+        
+          <img src= "{% static 'images/nasa.png'%}"width="50" height="40" class="d-inline-block align-top">
+          
+          <a class="navbar-brand text-white" href="#">Srinivas/projects</a>
+        <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{% url 'About'%}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{% url 'careers'%}">careers</a>
+            </li>
+            <li>
+              <a class="nav-link text-white" href="{% url 'contact'%}">Contact</a>
+            </li>   
+          </ul>
+    
+          <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+              Profiles
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="{% url 'password_change'%}">change password</a>
+              <a class="dropdown-item" href="{% url 'logout'%}">SignOut</a>
+            </div>
+          </div>
+ 
+         
+
+         
+          <form class="form-inline">
+            <a class="navbar-brand text-white"></a>
+
+
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div> 
+       
+      </nav>
+        <div id="ok">
+            <div class="container-fluid">
+              
+              <div class="row">
+                           <div class="vb">
+                               <div class="im">
+                                  <img src="{% static 'images/amer.jpg'%}"class="img-fluid"width="7%"height="4px">
+                               </div>
+                               <h1 class="title"col-md-6>USA <span> NASA </span>SPACE ACADEMY </h1>
+                              
+                              
+                              
+                               <P class="paragraph"col-sm-6>These educational events – sponsored by the Johns Hopkins Applied Physics Laboratory and the Discovery.</P>         
+                               <br>
+                            </div>
+                   
+                        
+                              <p class="js">Welcome, {{ user.username }}</p>
+                            
+                          
+                           
+                </div>
+            </div>
+        </div>
+   <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   {% for message in messages %}
+         
+   <div class="container">
+       <div class="alert alert-success alert-dismissible">
+         <button type="button" class="close" data-dismiss="alert">&times;</button>
+         <strong>Success!</strong><b>{{message}},</b> we will get in touch with in 24hrs
+       </div>
+   </div>
+{% endfor %}
+       <marquee>
+         <img src="{% static 'images/amer.jpg'%}"class="img-fluid"width=35px> <h5 style="color:rgb(0, 0, 0)"> NASA ACADEMY</h5>
+       </marquee>
+
+
+
+
+
+    
+
+
+
+       <div class="container">
+        <div class="row">
+               <div class="col-sm">
+                 <div class="card">
+                    <div class="card-body kj">
+                         <div class="card-title">
+                                <h6> WHEN NASA ACADEMY STARTED</h6>
+                             <div class="card-text">
+                                <p>click For Details </p>     
+                                <a href="{% url 'created'%}"class="btn btn-primary">Click Here..</a>
+                              </div>
+                         </div> 
+                    </div>
+                 </div>
+               </div>
+                    <div class="col-sm">
+                       <div class="card">
+                          <div class="card-body lo">
+                              <div class="card-title text-white">
+                                    <h6>HOW TO BECOME ASTRONAUT</h6>
+                                 <div class="card-text">
+                                     <p>click For Details </p>     
+                                     <a href="{% url 'become'%}"class="btn btn-light">Click Here..</a>
+                                 </div>
+                              </div> 
+                           </div>
+                       </div>
+                    </div>
+               <div class="col-sm">
+                    <div class="card">
+                       <div class="card-body ju">
+                          <div class="card-title">
+                              <h6>ASTRONAUTS TRAINING CENTER</h6>
+                            <div class="card-text">
+                              <p>click For Details </p>     
+                              <a href="{% url 'training'%}"class="btn btn-primary">Click Here..</a>
+                            </div>
+                          </div> 
+                       </div>
+                    </div>
+                </div>
+              <div class="col-sm">
+                 <div class="card">
+                      <div class="card-body bg-danger bg-gradient">
+                         <div class="card-title text-white">
+                            <h6> TECHNOLOGIES OF NASA SPACE FLIGHTS</h6>
+                           <div class="card-text">
+                             <p>click For Details </p>     
+                             <a href="{% url 'technologies'%}"class="btn btn-primary">Click Here..</a>
+                          </div>
+                        </div> 
+                      </div>
+                  </div>
+               </div>
+         </div>
+     </div>
+
+ 
+<br>
+
+
+<div id="ui">
+  <div class="contianer">
+    <div class="row">
+      <div class="col-md">
+        <center>  <video width="70%"height="100%"controls autoplay onplay="play()">
+         <source src="{% static 'images/btg.mp4'%}">
+         </video></center>
+        </div>
+      </div>
+  </div>
+</div><br>
+<center>
+  <div id="ypo">
+    <div class="container">
+      <div class="row">
+         <div class="col-sm">
+            <a tabindex="0" class="btn btn-md bg-primary bg-gradient text-white"role="button" data-toggle="popover" data-trigger="focus" title="Nasa Registeration"data-placement="right" data-content="Are u Awaiting For Registerations? ok!,Now Registerations Has Started.">Click For Registeration Dates</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</center>
+  
+
+
+      <div id="nju">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">         
+              <p class="bgh">started the registerations</p>
+              <p class="dv">FIX YOUR LITTLE PROBLEM AND LIGHT THIS CANDLE....</p>
+             <p class="m">Students must demonstrate that their work is original and that only students were part of the design process from beginning to end. The faculty advisor is responsible for verifying that the work is original, done entirely by the students, and is free of plagiarism. A letter with this information is required with the entry files.
+
+              Papers found to have plagiarized material will automatically be disqualified.
+              
+              A summary of a thorough literature review is required and should become the foundation of the design paper.
+              
+              Student submissions shall be treated as being free of restrictions and limitations on their use, reproduction, and publication.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+    <br>
+    <p>
+      <center>
+      <a class="btn btn-warning" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        Membership Card
+      </a>
+      <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseExamples" aria-expanded="false" aria-controls="collapseExample">
+        Future Projects
+      </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+       <h4>Membership Card:</h4> Daily capacity will be limited. As a result, you and all guests attending on your membership, in addition to extra guests for whom you have purchased tickets or anyone using guest passes provided as a membership benefit, will need to book a timed admission ticket online and in advance in order to enter the center. You are still required to bring your membership card alongside with your timed tickets and ID.
+        -Membership Team
+      </div>
+    </div>
+    <div class="collapse" id="collapseExamples">
+      <div class="card card-body">
+        <h4>Future projects</h4>Solar Orbiter comprises a 2.5 x 3.0 x 2.5 meter box-shaped bus with two solar panel wings spanning 18 meters to supply power. Total launch mass is 1800 kg. There is a 4.4 meter instrument boom and three 6.5 meter antennas protruding from the spacecraft body. A carbon fiber composite, titanium layered solar shield covers one side of the spacecraft. The shield has apertures for various instruments. The spacecraft is 3-axis stabilized to keep the heat shield oriented towards the Sun. Telemetry is dual X-band through steerable medium and high-gain antennas. Low gain antennas are used in the launch and early orbit phase, and are available for backup.
+      </div>
+    </div>
+  </center>
+      <Br>
+      <div  class="container">
+        <div class="row">
+          <div class="col-md">
+            <center>
+               <h5><i class="fa fa-check"id="dty"></i> Engineering.</h5>
+   
+               <h5><i class="fa fa-check"id="dty"></i> Statistics & Data Analysis.</h5>
+    
+               <h5><i class="fa fa-check"id="dty"></i>  Health & Society. Food & Nutrition. .</h5>
+         
+               <h5><i class="fa fa-check"id="dty"></i> Economics & Finance. Marketing & Communication.</h5>
+          
+               <h5><i class="fa fa-check"id="dty"></i> Art and Culture. Art, Architecture & Design. Music, Film & Audio.</h5> 
+          </center> 
+          
+           
+          </div>
+        </div>
+      </div>
+      <br>  <br>  
+       <div id="scro">
+            <div class="container">
+               <div class="row">
+                 <a class="da"href="#">>>></a>
+               </div>
+            </div>
+       </div>
+     <br>
+     
+
+    
+     <script>
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
+    function onfunction(){
+      alert("Your Browser Is Online....");
+    }
+    function offfunction(){
+      alert("Your Browser Is Offline....");
+    }
+    function pageshow(){
+      alert("Hello!,Welcome....");
+    }
+    function play(){
+      alert("Your Video Has Started Playing....");
+    }
+
+
+    
+     </script>
+     
+
+  
+     <center>
+      <div id="fj">
+        <div class="container-fluid">    
+              <p class="he">subscribe and register my site and get latest notifications...</p>
+              <p class="j">join now!</p>
+              <form action=" "method="POST">
+                {% csrf_token %} 
+               <div class="row">
+                 <div class="col-sm">
+                    <input type="text" class="s"placeholder="Enter Your Name"name="name"required>
+                 </div>
+                 <div class="col-sm">
+                  <input type="email" class="gty"placeholder="Enter Your E-Mail"name="email"required>
+                 </div>
+                 <div class="col-sm">
+                  <button type="submit"class="ad">SUBMIT</button>
+                 </div>
+               </div>
+              </form> 
+          
+               <div class="row">
+                 <div class="col-sm">
+                   <div id="su">
+                  <a href="https://www.facebook.com/srinivas.girijala.3"target="blank"><i class="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/royal_lifeeeeeeeee/"target="blank"><i class="fa fa-instagram "></i></a>
+                   <a href="https://t.me/royal_lifeeeeeeeee"target="blank"><i class="fa fa-telegram "></i></a>
+                   <a href="https://api.whatsapp.com/send?phone=8688042112&text=hello!%20admin"target="blank"><i class="fa fa-whatsapp "></i>
+                     <a href="https://github.com/srinivasgirijala?tab=repositories"target="blank"><i class="fa fa-github "></i></a>
+                    </div>
+                    </div>
+               </div>
+ 
+             </center>        
+             
+    
+    
+   
+          
+  
+    
+
+
+ 
+
+      <div class="njk">
+        copyright &copy; 2021 practise session
+     </div>
+
+
+ 
+
+
+
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    </body>
+</html>
+
